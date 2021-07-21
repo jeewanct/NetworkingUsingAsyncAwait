@@ -11,6 +11,10 @@
 		DB2FA1E92677F244001007CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA1E82677F244001007CD /* ContentView.swift */; };
 		DB2FA1EB2677F249001007CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2FA1EA2677F249001007CD /* Assets.xcassets */; };
 		DB2FA1EE2677F249001007CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2FA1ED2677F249001007CD /* Preview Assets.xcassets */; };
+		DB2FA1F62677F271001007CD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA1F52677F270001007CD /* HTTPClient.swift */; };
+		DB2FA1F82677F450001007CD /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA1F72677F450001007CD /* HTTPError.swift */; };
+		DB2FA1FA2677F4BB001007CD /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA1F92677F4BB001007CD /* UsersViewModel.swift */; };
+		DB2FA1FC2677F4E2001007CD /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA1FB2677F4E2001007CD /* UsersModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		DB2FA1E82677F244001007CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB2FA1EA2677F249001007CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB2FA1ED2677F249001007CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB2FA1F52677F270001007CD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DB2FA1F72677F450001007CD /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		DB2FA1F92677F4BB001007CD /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		DB2FA1FB2677F4E2001007CD /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,13 @@
 		DB2FA1E52677F244001007CD /* CuncurrencyBySwift */ = {
 			isa = PBXGroup;
 			children = (
+				DB2FA1F42677F25E001007CD /* HTTP */,
 				DB2FA1E62677F244001007CD /* CuncurrencyBySwiftApp.swift */,
 				DB2FA1E82677F244001007CD /* ContentView.swift */,
 				DB2FA1EA2677F249001007CD /* Assets.xcassets */,
 				DB2FA1EC2677F249001007CD /* Preview Content */,
+				DB2FA1F92677F4BB001007CD /* UsersViewModel.swift */,
+				DB2FA1FB2677F4E2001007CD /* UsersModel.swift */,
 			);
 			path = CuncurrencyBySwift;
 			sourceTree = "<group>";
@@ -65,6 +76,15 @@
 				DB2FA1ED2677F249001007CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB2FA1F42677F25E001007CD /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				DB2FA1F52677F270001007CD /* HTTPClient.swift */,
+				DB2FA1F72677F450001007CD /* HTTPError.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2FA1F82677F450001007CD /* HTTPError.swift in Sources */,
 				DB2FA1E92677F244001007CD /* ContentView.swift in Sources */,
+				DB2FA1FC2677F4E2001007CD /* UsersModel.swift in Sources */,
 				DB2FA1E72677F244001007CD /* CuncurrencyBySwiftApp.swift in Sources */,
+				DB2FA1F62677F271001007CD /* HTTPClient.swift in Sources */,
+				DB2FA1FA2677F4BB001007CD /* UsersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +300,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +329,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

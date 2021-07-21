@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = UserViewModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView{
+            ForEach(viewModel.users ?? [UserModel]()){ user in
+                Text(user.title)
+                    .padding()
+            }
+        }
+        .onAppear {
+            async{
+                await viewModel.fetchUsers()
+            }
+        }
     }
 }
 
